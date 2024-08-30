@@ -47,7 +47,7 @@ server.use(morgan('combined'));
 // server.use("/users", userRouter);
 
 
-server.get("/", function(){
+server.get("/", function(req, res){
   res.json("this is base url");
 })
 

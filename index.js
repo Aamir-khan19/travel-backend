@@ -47,6 +47,11 @@ server.use(morgan('combined'));
 // server.use("/users", userRouter);
 
 
+server.get("/", function(){
+  res.json("this is base url");
+})
+
+
 
 server.post("/data", saveUserData)
 

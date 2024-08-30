@@ -42,16 +42,18 @@ server.use(cors());
 server.use(express.json());  
 server.use(express.urlencoded());
 server.use(morgan('combined')); 
-server.use('/auth', authRouter);
-server.use('/products', productRouter); 
-server.use("/users", userRouter);
+// server.use('/auth', authRouter);
+// server.use('/products', productRouter); 
+// server.use("/users", userRouter);
+
 
 
 server.post("/data", saveUserData)
 
 
 server.use("*", (req, res)=>{
-  res.sendStatus(404)
+
+  res.status(404).json("Not found any mathching resource")
 });
 
 

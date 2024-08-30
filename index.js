@@ -48,7 +48,7 @@ server.use(morgan('combined'));
 
 
 server.get("/", function(req, res){
-  res.json("this is base url");
+  res.json("this is base url.");
 })
 
 
